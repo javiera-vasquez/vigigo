@@ -42,6 +42,10 @@ $red: $bad;
     background: transparent;
     .top-bar-section li {
         background: transparent;
+        a {
+            text-transform: uppercase;
+            text-shadow: 0 1px 0 rgba($black, 0.5);
+        }
         &:hover {
             background: rgba($oil, 0.5);
         }
