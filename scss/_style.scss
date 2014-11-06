@@ -51,7 +51,7 @@ $red: $bad;
 }
 
 // Button's
-.button.more {
+.button.more, .button.mail {
     @include light-2;
     font-weight: normal;
     background: rgba($good, 0.5);
@@ -61,6 +61,16 @@ $red: $bad;
         color: $white;
         background: darken($good, 5%);
         box-shadow: 0 1px 2px rgba($black, 0.5);
+    }
+}
+
+.button.mail {
+    background: $good;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    i {margin-right: 10px}
+    &:hover {
+        background: darken($good, 5%);
+        box-shadow: 0 1px 2px rgba($black, 0.25);
     }
 }
 
@@ -95,17 +105,17 @@ $red: $bad;
     z-index: 1;
     text-align: center;
     h5, h1, p {
-        color: darken($white, 15%);
+        color: $white;
         text-shadow: 0 1px 2px rgba($black, 0.4);
     }
     h5 {
         @include light-2;
+        color: darken($white, 15%);
         font-size: rem-calc(20);
         text-transform: uppercase;
         margin-bottom: 0.5em;
     }
     h1 {
-        color: $white;
         font-size: rem-calc(55);
     }
     p{
@@ -119,9 +129,33 @@ $red: $bad;
 
 // Inteligencia
 #inteligencia {
-    padding: 5em 0;
+    padding: 0 0 4em;
     background-color: $white;
     border-bottom: 1px solid $border;
+    .arrow {
+        text-align:  center;
+        margin: -1.5em 0 5em;
+        a {
+            font-size: rem-calc(35);
+            text-shadow: 0 2px 1px rgba($black, 0.8);
+            background-color: $oil;
+            border-radius: 100px;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+    }
+    blockquote {
+        border-left: 2px solid $oil;
+    }
+}
+
+// Servicios
+#servicios {
+    h3 {font-size: rem-calc(22);}
+    p {font-size: rem-calc(14);}
+    .loop {margin-bottom: 2em;}
 }
 
 // Contacto
@@ -131,8 +165,21 @@ $red: $bad;
     .over_map {
         position: absolute;
         width: 100%;
-        top: 10px;
+        top: 75px;
         z-index: 99;
+        .margin {
+            background: rgba($white, 0.9);
+            border-radius: $global-radius;
+            padding: 2.5em;
+            text-align: center;
+            .button {
+                margin: 1em 0 2em;
+            }
+            .leyend {
+                font-size: rem-calc(13);
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
