@@ -1,0 +1,47 @@
+// Basic setting
+@mixin left {float: left;}
+@mixin right {float: right;}
+@mixin clear {@include clearfix;}
+@mixin none {display: none;}
+@mixin block {display: block;}
+
+@mixin bold {font-weight: bold;}
+@mixin normal {font-weight: normal;}
+@mixin light {font-weight: 100;}
+@mixin light-2 {font-weight: 200;}
+
+.none {@include none;}
+.clear {clear: both;}
+
+// Color variables
+$white: #fff;
+$black: #010103;
+$ccc: #ccc;
+
+// Basic
+$primary: #3d70a5;
+$secondary: #7bc277;
+$header: #363636;
+$oil: #333;
+$smoke: #eee;
+$filter: #d05050;
+$jet: #363636;
+$column: #F2F2F2;
+$bg_lodge: #FCFCFC;
+
+// Alerts
+$good: #79BD50;
+$bad: #D05050;
+$alert: #f2d84b;
+$red: $bad;
+
+// Top bar styles
+.top-bar {
+    background: transparent;
+    .top-bar-section li {
+        background: transparent;
+        &:hover {
+            background: rgba($oil, 0.5);
+        }
+    }
+}
