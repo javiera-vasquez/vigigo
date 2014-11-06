@@ -28,6 +28,7 @@ $filter: #d05050;
 $jet: #363636;
 $column: #F2F2F2;
 $bg_lodge: #FCFCFC;
+$border: #d3d3d3;
 
 // Alerts
 $good: #79BD50;
@@ -36,6 +37,7 @@ $alert: #f2d84b;
 $red: $bad;
 
 // Top bar styles
+.contain-to-grid {z-index: 99;}
 .top-bar {
     background: transparent;
     .top-bar-section li {
@@ -45,3 +47,41 @@ $red: $bad;
         }
     }
 }
+
+// Style for all sections
+#servicios, #contacto {
+    margin: 5em 0;
+}
+
+// Slider
+#slider {
+    margin-top: -75px;
+    padding: 10em 0 5em;
+    background: url("../images/landing_bg.jpg") no-repeat center top;
+    z-index: 1;
+}
+
+// Inteligencia
+#inteligencia {
+    padding: 5em 0;
+    background-color: $white;
+    border-bottom: 1px solid $border;
+}
+
+// Contacto
+#contacto {
+    position: relative;
+    .google_map {}
+    .over_map {
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        z-index: 99;
+    }
+}
+
+// Frame = 1195 + 475 = 1670
+// Handlebar = 295 + 134 + 56 = 485
+// Grupo = 619 + 390 + 737 + 90 + 88 + 230 + 276 + 265 + 310 = 2967
+// Ruedas = 1670 + 100 + 590 = 2360
+// Total = 7482
