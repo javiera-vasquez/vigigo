@@ -31,10 +31,38 @@ $bg_lodge: #FCFCFC;
 $border: #d3d3d3;
 
 // Alerts
-$good: #79BD50;
+$good: #3BA656;
 $bad: #D05050;
 $alert: #f2d84b;
 $red: $bad;
+
+// Function to make a custom button, don't necessary in this case
+@mixin basic-button($bg-color:$primary-color, $text-color: $white, $size: 14, $padding: 35) {
+    background: $bg-color;
+    color: $text-color;
+    font-size: rem-calc($size);
+    box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+    padding: rem-calc(11) rem-calc($padding) rem-calc(12);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    &:hover {
+        background: darken($bg-color, 5%);
+        box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+    }
+}
+
+// Button's
+.button.more {
+    @include light-2;
+    font-weight: normal;
+    background: rgba($good, 0.5);
+    border: 1px solid $good;
+    color: darken($white, 10%);
+    &:hover {
+        color: $white;
+        background: darken($good, 5%);
+        box-shadow: 0 1px 2px rgba($black, 0.5);
+    }
+}
 
 // Top bar styles
 .contain-to-grid {z-index: 99;}
@@ -43,6 +71,8 @@ $red: $bad;
     .top-bar-section li {
         background: transparent;
         a {
+            @include light-2;
+            font-size: rem-calc(14);
             text-transform: uppercase;
             text-shadow: 0 1px 0 rgba($black, 0.5);
         }
@@ -63,6 +93,28 @@ $red: $bad;
     padding: 10em 0 5em;
     background: url("../images/landing_bg.jpg") no-repeat center top;
     z-index: 1;
+    text-align: center;
+    h5, h1, p {
+        color: darken($white, 15%);
+        text-shadow: 0 1px 2px rgba($black, 0.4);
+    }
+    h5 {
+        @include light-2;
+        font-size: rem-calc(20);
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+    h1 {
+        color: $white;
+        font-size: rem-calc(55);
+    }
+    p{
+        @include light-2;
+        margin: 0 8em;
+        margin-bottom: 2em;
+        font-size: rem-calc(20);
+    }
+    .button {margin-bottom: 0;}
 }
 
 // Inteligencia
