@@ -90,6 +90,21 @@ $red: $bad;
             background: rgba($oil, 0.5);
         }
     }
+   .top-bar-section .has-form {
+        .button {
+            // line-height: 65px;
+            // text-transform: none;
+            background: $good;
+            margin-top: 5px;
+            padding: 13px 20px;
+            &:hover {
+                background: darken($good, 5%);
+            }
+        }
+        &:hover {
+            background: transparent;
+        }
+    }
 }
 
 // Style for all sections
